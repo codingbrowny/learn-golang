@@ -4,24 +4,20 @@ import "fmt"
 
 func main() {
 
-	age := 25
-	name := "Browny"
+	var scores [3]int = [3]int{20, 40, 60}
+	fmt.Println(scores)
 
-	//PRINT
-	fmt.Print("First Print")
+	//Access element in array
+	fmt.Println(scores[0])
 
-	//NEW LINE
-	fmt.Println("Printed on a new line")
-	fmt.Println("Hello Go!")
-	fmt.Println("My name is", name, "and I am", age, "years old")
+	//Change value at array index
+	scores[0] = 100
 
+	fmt.Println(scores)
 
-	//FORMATTED STRINGS - (%_ FORMAT SPECIFIER)
-	fmt.Printf("My name is %v and I am %v years old \n", name, age)
-	fmt.Printf("%v is of type %T \n", name, name)
+	// Compiler Count ELements
+	names := [...]string{"Sam", "Bob", "Phil", "Browny"}
 
-	//SAVE FORMATTED STRING
-	var formattedStr = fmt.Sprintf("My name is %v and I am %v years old \n", name, age)
-	fmt.Println(formattedStr)
+	fmt.Println(names, len(names))
 
 }
