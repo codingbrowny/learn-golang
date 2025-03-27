@@ -3,21 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	// INTEGERS - INT8, INT16 INT32 INT64
-	var age int = 20
-	fmt.Println(age)
+
+	age := 25
+	name := "Browny"
+
+	//PRINT
+	fmt.Print("First Print")
+
+	//NEW LINE
+	fmt.Println("Printed on a new line")
+	fmt.Println("Hello Go!")
+	fmt.Println("My name is", name, "and I am", age, "years old")
 
 
-	//STRINGS
-	var name string = "Browny"
-	fmt.Println(name)
+	//FORMATTED STRINGS - (%_ FORMAT SPECIFIER)
+	fmt.Printf("My name is %v and I am %v years old \n", name, age)
+	fmt.Printf("%v is of type %T \n", name, name)
 
-	//BOOLEAN
-	var isActive bool = false
-	var isOpened bool = true
-	fmt.Println(isActive, isOpened)
+	//SAVE FORMATTED STRING
+	var formattedStr = fmt.Sprintf("My name is %v and I am %v years old \n", name, age)
+	fmt.Println(formattedStr)
 
-	//FLOATS - FLOAT32, FLOAT64
-	var price float32 = 5.99
-	fmt.Println(price)
 }
